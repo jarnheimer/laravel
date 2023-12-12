@@ -81,7 +81,7 @@ OPENAI_REQUEST_TIMEOUT=
 
 ## Usage
 
-For usage examples, take a look at the [openai-php/client](https://github.com/openai-php/client) repository.
+For usage examples, look at the [openai-php/client](https://github.com/openai-php/client) repository.
 
 ## Testing
 
@@ -89,7 +89,7 @@ The `OpenAI` facade comes with a `fake()` method that allows you to fake the API
 
 The fake responses are returned in the order they are provided to the `fake()` method.
 
-All responses are having a `fake()` method that allows you to easily create a response object by only providing the parameters relevant for your test case.
+All responses have a `fake()` method that allows you to easily create a response object by only providing the parameters relevant for your test case.
 
 ```php
 use OpenAI\Laravel\Facades\OpenAI;
@@ -113,7 +113,7 @@ $completion = OpenAI::completions()->create([
 expect($completion['choices'][0]['text'])->toBe('awesome!');
 ```
 
-After the requests have been sent there are various methods to ensure that the expected requests were sent:
+After the requests have been sent, there are various methods to ensure that the expected requests are sent:
 
 ```php
 // assert completion create request was sent
@@ -124,7 +124,7 @@ OpenAI::assertSent(Completions::class, function (string $method, array $paramete
 });
 ```
 
-For more testing examples, take a look at the [openai-php/client](https://github.com/openai-php/client#testing) repository.
+For more testing examples, look at the [openai-php/client](https://github.com/openai-php/client#testing) repository.
 
 ---
 
